@@ -1,0 +1,12 @@
+@startuml
+
+View -> Controller : 表示命令
+Controller -> Usecase : データ取得
+Usecase -> Model : データを取得する
+
+Model --> Usecase : データ取得結果を渡す
+Usecase --> Controller : データ取得結果に応じて処理
+
+Controller --> View : データを表示する
+
+@enduml
